@@ -91,6 +91,8 @@ aside ul li a{
 
 /* Main */
 main {
+
+
 	margin: 20px 0;
 	padding-left: 20px;
 	float: left;
@@ -98,6 +100,41 @@ main {
 	min-height: 600px;
 	border-left: 2px solid #e8b417;
 }
+
+/* the styles for the form */
+label {
+    float: left;
+    width: 12em;
+    text-align: right;
+}
+
+label, input, select {
+    font-size: 80%;
+}
+
+input, select {
+    width: 15em;
+    margin-left: .5em;
+    margin-bottom: .5em;
+}
+
+#buttons input {
+    width: 10em;
+}
+
+fieldset#buttons {
+    margin-top: 1em;
+}
+
+legend {
+    color: #929090;
+    font-weight: bold;
+    font-size: 85%;
+    margin-bottom: .5em;
+}
+
+
+
 
 main h1 { 
 	margin: 0;
