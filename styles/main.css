@@ -1,178 +1,206 @@
+/*
+Description: Primary stylesheet for ordering from New year Central Home Page
+Author: Elmabruk Saleh
+*/  
+
+/* Using universal selector (*) margin and padding for all elements to 0 */
+
 * {
 	margin: 0;
 	padding: 0;
 }
 
+
+/* The styles for the body */
+
 body  {	
-	background-image: url("../images/berry.jpg");
-	font-family: Verdana, Arial, Helvetica, sans-serif;
-	font-size: 100%;
+	background-image: url("../images/berry.jpg");         /* Add berry image as  background image located in images folder */
+	font-family: Verdana, Arial, Helvetica, sans-serif;  /* Select font Verdana, Arial, Helvetica, sans-serif family */
+	font-size: 85%;                                     /* Set default font size of home bage to 85%   */
 }
 
-div#frame {
-	margin: 25px auto;
-	padding: 20px 30px 20px 20px;
-	width: 50%;
-	min-width: 900px;
-	background-color: #ffffff;	
+div#frame {                                /* Hold all the content using div elment */
+	margin: 25px auto;                  /* Set top and buttom margin 25px and the browser calculates the margin in left and right sides */
+	padding: 20px 30px 20px 20px;      /* Set padding in the top,bottom ,and left is 20px and 30px in the right */
+	width: 50%;                       /* 50 % of the containing block width    */
+	min-width: 900px;                /*  Minimum width of 900 pixels          */
+	background-color: #ffffff;	  /*  Set background color is white         */
+    /* Given colors and percentages 20,70,100  applied as a gradient background */
 	background-image: linear-gradient(#ffffff 20%, #fdf7e8 70%, #ffffff 100%);
-	border: 2px solid #009926;
-	border-radius: 8px;
-	box-shadow: 0px 0px 90px 2px #008020;
+	border: 2px solid #009926;                  /* Two px light green border color */
+	border-radius: 8px;                        /* radius border with 8px          */
+	box-shadow: 0px 0px 90px 2px #008020;     /* Box shadow around green color   */
 }
 
 p {
-	margin: 20px 0px;
+	margin: 20px 0px;       /* Set paragraph margin 20px in top and bottom and 0px in right, left sides  */
 }
 
 a {
-	color: #008020; 
+	color: #008020;       /* Set a green color */
 }
 
 a:link, a:visited { 
-	text-decoration: none; 
+	text-decoration: none;        /* Do not change the color after visited */
 }
 
 a:hover, a:focus { 
-    text-decoration: underline; 
+    text-decoration: underline;     /* Appear as underlined text when a mouse comes on it */
 }
 
-/* Header */
+/* The styles for the Header */
 header {
-	height: 160px;
-	border-bottom: 2px solid #e8b417;
+	height: 160px;                         /* Set header height 160px */
+	border-bottom: 2px solid #e8b417;     /* Set bottom border 2px, solid and orange color */
 }
 	
 header img { 
-	float: left; 
+	float: left;                        /* Display the image in the header to left */
 } 
 
 header div#header-line-1 {
-	font-size: 300%;
-	font-weight: bold;	
-	text-align: right;
-	color: #ecc03b;
-	text-shadow: 2px 2px 2px black;
+	font-size: 300%;                          /* Increase font size to 300%     */
+	font-weight: bold;	                 /* font style is bold  */
+	text-align: right;                      /* Align the text to the right */
+	color: #ecc03b;                        /* Set color pro. yealow */
+	text-shadow: 2px 2px 2px black;       /* Text has shadow in direction 2px and black color */
 }
 
 header div#header-line-2 {
-	font-size: 130%;
-	font-weight: bold;
-	text-align: right;
-	font-style: italic;
-	color: #008020;
+	font-size: 130%;               /* Increase font size to 130    */
+	font-weight: bold;            /* Set font weight bold */
+	text-align: right;           /* Align the text to the right */
+	font-style: italic;         /* Display in italics style    */
+	color: #008020;            /* Set the color green         */
 }
 
 /* aside */
 aside {
-	width: 230px;
-	float: left;
-	margin: 30px 10px 0px 0px;
+	width: 230px;                  /*  Width is 230 pixels  */
+	float: left;                  /* Display aside in left column */
+	margin: 30px 10px 0px 0px;   /* Set margin top 30px, right 10px, bottom and left 0px */
 }
 
 aside div.sidebar-title {
-	font-size: 115%;
-	font-weight: bold;
-	color: #d1a215;
+	font-size: 115%;        /* Increse font size to 115% */
+	font-weight: bold;     /* Set font weight bold */
+	color: #d1a215;       /* Set the color orange */
 }
 
 aside ul {
-	margin: 15px 0px 0px 15px;
+	margin: 15px 0px 0px 15px;    /* Set margin top, left 15px, right and bottom 0px */
 }
 
 aside ul li {
-	margin: 15px 0px 0px 0px;
+	margin: 15px 0px 0px 0px;    /* Set margin top 15px, left,right and bottom 0px */
 }
 
 aside ul li a{
-	font-style: italic;
-	font-size: 90%;
+	font-style: italic;    /* Display in italics style    */
+	font-size: 90%;        /* Decrese font size to 90%    */
 }
 
-/* Main */
+/* The styles for the Main */
+
 main {
 
 
-	margin: 20px 0;
-	padding-left: 20px;
-	float: left;
-	width: 638px;
-	min-height: 600px;
-	border-left: 2px solid #e8b417;
+	margin: 20px 0;                        /* Set margin top and bottom 20px, left andright 0px */
+	padding-left: 20px;                   /* Set left padding is 20px */
+	float: left;                         /* Display the main  in the left side */
+	width: 638px;                       /* Set main width 638px */
+	min-height: 600px;                 /* minimum height of the main is 600 px */
+	border-left: 2px solid #e8b417;   /* Set left border is solid and 2px with orange color*/
 }
 
 /* the styles for the form */
+
+/* Label */
 label {
-    float: left;
-    width: 12em;
-    text-align: right;
+    float: left;               /* Set the label in left side */
+    width: 15em;              /* Label width is 15em  */
+    text-align: right;       /* Set the label text in the right side */
 }
 
 label, input, select {
-    font-size: 80%;
+    font-size: 90%;        /* Decrese font size of label, input and select to 90% */
 }
-
-input, select {
-    width: 15em;
-    margin-left: .5em;
+/* Input */
+input {
+    width: 15em;             /* Input width is 15em  */
+    margin-left: .5em;       /* Set input margin left, and bottom .5em*/
     margin-bottom: .5em;
 }
 
-#buttons input {
-    width: 10em;
-}
+
 
 fieldset#buttons {
-    margin-top: 1em;
+    margin-top: 1em;   /* The space between field bottons in the top 1em  */
 }
 
+/* Legend */
 legend {
-    color: #929090;
-    font-weight: bold;
-    font-size: 85%;
+    color: #929090;             /* Set the legend gray color       */
+    font-weight: bold;         /* Set font weight bold in legend  */
+    font-size: 90%;           /*Decrese legend font size to 90%  */
     margin-bottom: .5em;
 }
+fieldset #Bill_Me,#Credit_Card{
 
+width:1em;             /* The width fieldset in Bill_Me, and Credit_Card id's 1em  */
+}
 
-
+input:required, input[required] { 
+    border: 2px solid orange;         /* required fields have a 2-pixel orange border */    
+}
+input:valid {
+    border: 1px solid black;         /*valid fields have a 1-pixel black border*/
+}
+input:invalid {
+    box-shadow: none;              /* invalid fields have no border */
+}
 
 main h1 { 
-	margin: 0;
-	font-size: 200%;
+	margin: 0;               /* Set h1 in main margin 0 */
+	font-size: 200%;        /* Increase the font size for h1 in main to 200 % */
 }
 
 main h1:first-letter { 
-	font-size: 240%;
+	font-size: 240%;        /* Set h1 first letter in main 240% means bigger than others*/
 }
 
 main h2 {
-	margin: 25px 0px;
-	font-size: 125%;
+	margin: 25px 0px;      /* Set the h2 margin in the main to 25px top and bottom and 0px right and left*/ 
+	font-size: 125%;      /* Increase h2 font size in main to 125 % */
 }
 
 main h3 {	
-	font-size: 110%;
+	font-size: 110%;      /* Increase h3 font size in main to 110 % */
 }
 
 main ul#product-categories {
-	list-style-type: none;
+	list-style-type: none;        /* Remove unorder list points */
 }
 
 main ul#product-categories li {
-	margin: 35px 0px;
+	margin: 35px 0px;           /* Set the unorder list top and bottom margins to 35px left and right. 0px  */
 }
 
 main ul#product-categories h3 {
-	margin-top: 10px;
+ /*Set unorder list with "product-categories id" h3 top margin  in the main to 10px  */
+	margin-top: 10px;   
 }
 
 main ul#product-categories p{
+/*Set unorder list with "product-categories id" P top margin  in the main to 10px  */
 	margin-top: 5px;
 }
 
 main ul#product-categories img {
-	border: 2px solid #e8b417;
+/* Add border to images in the Product Categories section using #e8b417 color */
+	border: 2px solid #e8b417;      
 	border-radius: 10px;
+    /* Add box shadow to images in the Product Categories section using #ecc03b color */
 	box-shadow: 0px 0px 6px 2px #ecc03b;
 }
 
@@ -182,40 +210,53 @@ main ul#product-categories img {
 }
 
 #nav_menu ul {
-	list-style-type: none;
-	position: relative;
+	list-style-type: none;    /* Remove unorder list points */
+	position: relative;      /* positioned relative to its normal position.*/
 }
 
 #nav_menu ul li {
-	float: left;
+	float: left;      /*Set unorder list in nav_menu id in the left side*/
 }
 
 #nav_menu ul li a {
+    /* Given colors and percentages 15,55,100  applied as a gradient background */
     background-image: linear-gradient(#fdf7e8 15%, #ffffff 55%, #fdf7e8 100%);
-	width: 180px;
-	padding: 1em 0;
-	display: block;
-    text-align: center;    
-    text-decoration: none;  
-	font-weight: bold;
+	width: 180px;                /* Set width 180px        */
+	padding: 1em 0;             /* Set padding in top and bottom 1em, and left and right 0em */
+	display: block;            /* Display as black        */
+    text-align: center;         /* Set the text in center  */
+    text-decoration: none;     /* Without text decoration */
+	font-weight: bold;      /* Set font weight bold    */
 }
 
 #nav_menu ul li a:hover, #nav_menu ul li a:focus {
-	color: #d1a215;
+	color: #d1a215;       /* Set the color in #nav_menu ul li a:hover, #nav_menu ul li a:focus orange*/
 }
 
 #nav_menu a.current, #nav_menu a.current:hover, #nav_menu a.current:focus {
-	color: #d1a215;	
-	font-weight: bold;
+    /* Set the color in #nav_menu a.current, #nav_menu a.current:hover, #nav_menu a.current:focus orange*/
+	color: #d1a215;	 
+	font-weight: bold;    /* Set font weight bold */
 }
+
+select#Expiration year{
+width: 5em;             /*Set Format year to 7 em */
+}
+
+select#Expiration Month{
+width: 7em;             /*Set Format month to 7 em */
+}
+
+
+
 
 /* Footer */
 footer {
-	clear: left;
-	border-top: 2px solid #e8b417;
+	clear: left;           /* Clear the left*/
+	border-top: 2px solid #e8b417;     /* Create solid top border in footer section 2px*/
 }
 
 footer p {
-	font-size: 80%;
-	text-align: center;
+	font-size: 80%;          /* decrease font size in footer section to 80% */
+	text-align: center;     /* Set the text in the center */
 }

@@ -1,21 +1,30 @@
 	<!DOCTYPE html>
 <html lang="en">
+<!-- 
+      Description: html file for create order from New year Central Home Page
+      Author: Elmabruk Saleh  -->
+ 
 	<head>
 		<meta charset="utf-8" />
-		<title>Event Tickets Order Form</title>
+		<title>Event Tickets Order Form</title>        <!--Create web page title -->
+        <!-- spear style file normalize.css has defult configration -->
 		<link rel="stylesheet" type="text/css" href="styles/normalize.css">
-		<link rel="stylesheet" type="text/css" href="styles/main.css">		
+        <!--style sheet located in the same level in folder name styles, file name main.css -->
+		<link rel="stylesheet" type="text/css" href="styles/main.css">	 
 	</head>
 
 	<body>
 		<div id="frame">
 			<header>
+            <!-- Add a picture to the website at the same path level named ornament-logo.png  in image folder with a 400px width -->
 				<img src="images/ornament-logo.png" alt="New Year Central Logo" style="width: 400px;">
-				<div id="header-line-1">New Year Central</div>
-				<div id="header-line-2">For the child in all of us!</div>
+                
+				<div id="header-line-1">New Year Central</div>              <!--web page main title-->      
+				<div id="header-line-2">For the child in all of us!</div>   <!--title smaler than h1 title-->
 			</header>
 
 			<!-- navigation starts -->
+            <!--Create unorder list-->
 			<nav id="nav_menu">
 				<ul>
 					<li><a href="index.html">Home</a></li>
@@ -25,7 +34,7 @@
 					<li><a href="contact_us.html">Contact Us</a></li>
 				</ul>
 			</nav>
-
+           <!-- Adding the (Products of The Week)content to the page on the right side as aside element -->
 			<aside>
 				<div class="sidebar-title">Products of The Week...</div>
 				<ul>
@@ -35,142 +44,147 @@
 				</ul>
 			</aside>
 			
-			<main>
+		<main>
 				<h1>Order Event Tickets</h1>
 				<!-- The form starts here... -->
-                  <form name="Order_Form" action="place_order.html" method="post">
+                <!-- form name is Order_Form and when submit will go to place_order.html file and the method is post -->
+            <form name="Order_Form" action="place_order.html" method="post">
 			
 			<!-- The fieldset and legend -->
+                  <!-- First legend is Member Information -->
 			<fieldset>
 				<legend>Member Information</legend>
 			
 				<!-- Text boxes with the accompanying labels -->
                          <label for="E-mail">E-Mail:</label>			
-				 <input type="text" id="E-mail" name="E-mail" autofocus><br> <!-- Notice the autofocus Boolean attribute -->
-				
+				<input type="text" id="E-mail" name="E-mail"  autofocus="" ><br> <!-- email is the autofocus Boolean attribute -->
 				<label for="f_name">First name:</label>			
-				<input type="text" id="f_name" name="f_name"  autofocus><br> <!-- Notice the autofocus Boolean attribute -->
+				<input type="text" id="f_name" name="f_name"  required=""><br> <!-- First name is the required Boolean attribute -->
 				<label for="l_name">Last name:</label>
-				<input type="text" id="l_name" name="l_name" ><br>
+				<input type="text" id="l_name" name="l_name"  required="" ><br> <!-- Last name is the required Boolean attribute -->
 				<label for="Address"> Address:</label>
-				<input type="text" id="Address" name="Address"><br>	<!-- Notice the  attribute -->
-                        <label for="City"> City:</label>
-				<input type="text" id="City" name="City" ><br>	<!-- Notice the  attribute -->
+				<input type="text" id="Address" name="Address" autofocus=""><br>	<!-- Address is autofocus the  attribute -->
+                <label for="City"> City:</label>
+				<input type="text" id="City" name="City"  required="" ><br>	<!-- City is the required  attribute -->
 
-				<label for="Province">Province:</label>
-				<input type="province" id="province" name="Province" placeholder="2-character code"><br> <!-- The province field. Notice the placeholder attribute. -->
+                <!-- The province field is required attribute and with place holder 2-character code, also with maximum length 2 characters -->
+
+                <label for="province">Province:</label>
+                <input type="text" name="province" id="province" maxlength="2" placeholder="2-character code" required=""><br>
+
+                <!-- The post code field is required attribute and with place holder "6 characters long", also with maximum length 6 characters or numbers -->
+ 
 				
-			       <label for="Postal Code">Postal Code:</label>
-				<input type="Postal Code" id="Postal Code" name="Postal Code" placeholder="6 characters"><br> <!-- The postal code field. Notice the placeholder attribute. -->
+			        <label for="Postal Code">Postal Code:</label>
 
-                         
+                    <input type="text" name="postal_code" id="postal_code" required="" pattern="[A-Za-z0-9]{6}" title="Must be 6 alphanumeric characters long" maxlength="6" placeholder="6 characters long"><br>
+				
+                    <!-- The phone number field autofocus and placeholder "999-999-9999" attribute. -->     
 			       <label for="Phone Number">Phone Number:</label>
-				<input type="Phone Number" id="Phone Number" name="Phone Number" placeholder="999-999-9999"><br> <!-- The phone number field. Notice the placeholder attribute. -->
+				<input type="Phone Number" id="Phone Number" name="Phone Number" placeholder="999-999-9999"><br> 
+                
 
-                        <fieldset>
+            </fieldset>
+
+             <!--Create New fieldset under legend name Ordring Inforation-->
+            <fieldset>
 				<legend>Ordring Information</legend>
                          
-				<!-- The drop-down list with an accompanying label. Notice the selected attribute -->
+			<!-- The drop-down list with an accompanying label. "Cookie Decoration" is a selected attribute -->
 				<label for="Event">Event:</label>
 				<select id="Event" name="Event">
-				  <option value="Cookie Decoration Contest" selected>Cookie Decoration Contest</option>
-				  <option value="Tree Decoration Contest" >Tree Decoration Contest</option>
-				  <option value="Gift of Light Ride-Along">Gift of Light Ride-Along</option>
-				  <option value="Breakfast with Santa">Breakfast with Santa</option>
+				    <option value="Cookie Decoration Contest" selected>Cookie Decoration Contest</option>
+				    <option value="Tree Decoration Contest" >Tree Decoration Contest</option>
+				    <option value="Gift of Light Ride-Along">Gift of Light Ride-Along</option>
+				    <option value="Breakfast with Santa">Breakfast with Santa</option>
 				</select><br>
-
-                        <label for="Order Type">Order Type:</label>
+            <!-- The drop-down list with an accompanying label. "Member Package" is a selected attribute -->
+                <label for="Order Type">Order Type:</label>
 				<select id="Order Type" name="Order Type">
-				  <option value="Member Package" selected>Member Package </option>
-				  <option value="Donor Package" > Donor Package</option>
-				  <option value="Single Tickets">Single Tickets</option>
+				    <option value="Member Package" selected>Member Package </option> <!--using selected attribute -->
+				    <option value="Donor Package" > Donor Package</option>           <!--Second option-->
+				    <option value="Single Tickets">Single Tickets</option>           <!--Third option-->
 				  
 				</select><br>
-
-                         <label for="Number of Tickets">Number of Tickets:</label>
-                         <input type="Number of Tickets" id="Number of Tickets" name="Number of Tickets" placeholder="Number of single tickets"><br>
-				
-
+                <!--Create label to input ticket number-->
+                <label for="Number of Tickets">Number of Tickets:</label>
+                <input type="Number of Tickets" id="Number of Tickets" name="Number of Tickets" placeholder="Number of single tickets"><br>
 				<br><br>
-                          </fieldset>
+            </fieldset>         <!--Close filedset-->
 
 
-                        <fieldset>			
+            <fieldset>	       <!--Open new filedset with legend name "Payment Meyhod"-->		
 				<legend>Payment Method</legend>
+
 				<!-- The radio buttons, coded as a radio group -->
-                        <input type="radio" id="Payment Method" name="Payment Method" value="Payment Method">
-                        <label for="Bill Me">Bill Me</label><br>
+                <input type="radio" id="Bill_Me" name="Payment Method" value="Bill_Me"> Bill Me
+                <label for="Bill Me"></label>
+				<input type="radio" id="Credit_Card" name="Payment Method" value="Payment Method"> Credit Card
+                <label for="Credit Card"></label>
+			    <br><br>
+            </fieldset>
 				
-				<input type="radio" id="Payment Method" name="Payment Method" value="Payment Method">
-                        <label for="Credit Card">Credit Card</label>
-				
-				<br><br>
-                         </fieldset>
-				
-                        <fieldset>			
+            <fieldset>	<!--Open new filedset with legend name "Credit Card Information"-->		
 				<legend>Credit Card Information</legend>
-				
-				<!-- The drop-down list with an accompanying label. Notice the selected attribute -->
+				<!-- The drop-down list with an accompanying label. Visa option is the selected attribute -->
 				<label for="Card Type">Card Type:</label>
 				<select id="Card Type" name="Card Type">
-				  <option value="Visa" selected>Visa</option>
-				  <option value="Master Card" >Master Card</option>
-				  <option value="Discover">Discover</option>
+				    <option value="Visa" selected>Visa</option>        <!--First option visa-->
+				    <option value="Master Card" >Master Card</option>  <!--Second option Master Card-->
+				    <option value="Discover">Discover</option>         <!--Third option Discover-->
                       
-                          </select><br>
-				  
-                        <label for="Card Number">Card Number:</label>
-                        <input type="Card Number" id="Card Number" name="Card Number" placeholder="16 digits"><br>
-				
-				  
-
-                         <label for="Expiration Data">Expiration Data:</label>
-                           <select id="Expiration Data" name="Expiration Data">
+                </select><br>
+				<!--Create new label for card number-->
+                <label for="Card Number">Card Number:</label>
+                <!--Card number is required , with a maximum length of 16 digits and a place holder for "16 digits"-->
+                <input type="Card Number" id="Card Number" name="Card Number" maxlength="16" required="" placeholder="16 digits"><br>
+				<!--Create label for year monthes and dipalying Junuary by selected attribute-->
+				<label for="Expiration Data">Expiration Data:</label>
+                <select id="Expiration Month" name="Expiration Month">
 				    <option value="January" selected>January</option>
 				    <option value="February" >February</option>
 				    <option value="March">March</option>
-                            <option value="April">April</option>
-                            <option value="May">May</option>
-                            <option value="June">June</option>
-                            <option value="July">July</option>
-                            <option value="August">August</option>
-                            <option value="September">September</option>
-                            <option value="October">October</option>
-                            <option value="November">November</option>
-                            <option value="December">December</option>
-                          </select>
-
-                         
-                           <select id="Expiration year" name="Expiration year">
-				     <option value="2021" selected>2021</option>
-				     <option value="2020" >2022</option>
-				     <option value="2019">2023</option>
-                             <option value="2019">2024</option>
-                             <option value="2019">2025</option>
-                             <option value="2019">2026</option>
-                             <option value="2019">2027</option>
+                    <option value="April">April</option>
+                    <option value="May">May</option>
+                    <option value="June">June</option>
+                    <option value="July">July</option>
+                    <option value="August">August</option>
+                    <option value="September">September</option>
+                    <option value="October">October</option>
+                    <option value="November">November</option>
+                    <option value="December">December</option>
+                </select>
+                <!--Create label for years m and dipalying 2021 by selected attribute-->
+                <select id="Expiration year" name="Expiration year">
+				    <option value="2021" selected>2021</option>
+				    <option value="2022" >2022</option>
+				    <option value="2023">2023</option>
+                    <option value="2024">2024</option>
+                    <option value="2025">2025</option>
+                    <option value="2026">2026</option>
+                    <option value="2027">2027</option>
                                
-                          </select><br>
+                </select><br>
                         
-                          </fieldset>
+            </fieldset>
 
-			
-				<fieldset>			
+			<!-- The two buttons for submision and reset fildes -->
+			<fieldset>			
 				<legend>Submit Your Order</legend>
-				
-				<!-- The two buttons  -->
-				<input type="submit" name="submit" value="Submit"> <!-- the update button sends the form data to the server; -->
+				<input type="submit" name="submit" value="Submit">     <!-- the update button sends the form data to the server; -->
 				<input type="reset" name="reset" value="Reset Fildes"> <!-- the reset button resetting the form field values to their default values -->			
 			</fieldset>
                      
-		</form>
+		    </form>   <!--Close form tag-->
+			
 
 				
-			</main>
+		</main>     <!--Close main tag-->
 			
-			<footer>
+			<footer>   <!--Open footer tag-->
 				<p>&copy; 2022 New Year Central. Created by Elmabruk Saleh.</p>
-			</footer>
-		</div>
-	</body>
+			</footer>         <!--Close footer tag-->
+		</div>                <!--Close div tag-->
+	</body>                   <!--Close body tag-->
+</html>                       <!--Close html tag-->
 </html>
