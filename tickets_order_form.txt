@@ -115,17 +115,15 @@
             </fieldset>         <!--Close filedset-->
 
 
-            <fieldset>	       <!--Open new filedset with legend name "Payment Meyhod"-->	
-	
-		    <legend>Payment Method</legend>
+            <fieldset>	       <!--Open new filedset with legend name "Payment Meyhod"-->		
+				<legend>Payment Method</legend>
 
-		    <!-- The radio buttons, coded as a radio group -->
-                <label for="Bill Me"></label>
+				<!-- The radio buttons, coded as a radio group -->
                 <input type="radio" id="Bill_Me" name="Payment Method" value="Bill_Me"> Bill Me
+                <label for="Bill Me"></label>
+				<input type="radio" id="Credit_Card" name="Payment Method" value="Credit_Card"> Credit Card
                 <label for="Credit Card"></label>
-		    <input type="radio" id="Credit_Card" name="Payment Method" value="Credit_Card"> Credit Card
-                
-		    <br><br>
+			    <br><br>
             </fieldset>
 				
             <fieldset>	<!--Open new filedset with legend name "Credit Card Information"-->		
